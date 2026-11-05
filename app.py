@@ -11,7 +11,6 @@ def predict(img):
     pred, pred_idx, proba = learn.predict(img)
     return {
         labels[i]: float(proba[i])
-        for i in range(len(labels))
     }
 
 demo = gr.Interface(
